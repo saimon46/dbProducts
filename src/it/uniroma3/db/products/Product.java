@@ -94,6 +94,5 @@ import javax.persistence.Column;
         sb.append("}\n");
         return sb.toString();
     }
-	
     
 }
