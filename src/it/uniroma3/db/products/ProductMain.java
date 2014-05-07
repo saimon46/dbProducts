@@ -12,7 +12,7 @@ public class ProductMain {
 		EntityManager em = emf.createEntityManager();
 
 		Product product = new Product();
-		product.setName("CASC");
+		product.setName("CASCa");
 		product.setPrice(3.5F);
 		product.setDescription("A wonderful bla bla");
 		product.setCode("9781853262715-AA");
