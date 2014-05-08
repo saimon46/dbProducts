@@ -13,6 +13,7 @@
 			<property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(SchemaAction=add,ForeignKeys=true)" />
 			<property name="openjpa.Log" value="DefaultLevel=WARN, Tool=INFO" />
 			<property name="RuntimeUnenhancedClasses" value="supported"/>
+			<property name="openjpa.jdbc.MappingDefaults" value="ForeignKeyDeleteAction=restrict,JoinForeignKeyDeleteAction=restrict"/>
 		</properties>
 	</persistence-unit>
 </persistence>
