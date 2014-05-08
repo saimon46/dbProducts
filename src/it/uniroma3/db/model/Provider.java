@@ -1,10 +1,8 @@
 package it.uniroma3.db.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import java.util.List;
+
+import javax.persistence.*;
 
 
 @Entity
@@ -16,12 +14,21 @@ public class Provider {
 
 	@Column(nullable = false)
 	private String name;
-
+	
+	@Column
 	private String phonenumber;
 	
+	@Column
 	private String email;
 	
+	@Column
 	private String vatin;
+	
+	@ManyToMany(mappedBy = "providers")
+	private List<Product> products;
+	
+	@OneToOne
+	private Address address;
 
 	public Provider(){
 	}

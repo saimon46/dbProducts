@@ -1,11 +1,8 @@
 package it.uniroma3.db.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.NamedQuery;
-import javax.persistence.Column;
+import java.util.List;
+
+import javax.persistence.*;
 
 	@Entity
 	@NamedQuery(name = "findAllProducts", query = "SELECT p FROM Product p")
@@ -18,6 +15,7 @@ import javax.persistence.Column;
 	@Column(nullable = false)
 	private String name;
 
+	@Column
 	private Float price;
 	
 	@Column(length = 2000)
@@ -25,6 +23,9 @@ import javax.persistence.Column;
 
 	@Column(nullable = false)
 	private String code;
+	
+	@ManyToMany
+	private List<Provider> providers;
 	
 	public Product() {
     }
@@ -34,7 +35,7 @@ import javax.persistence.Column;
         this.price = price;
         this.description = description;
         this.code = code;
-}
+	}
 
     //          Getters & Setters        
     

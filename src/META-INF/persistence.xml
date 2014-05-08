@@ -3,7 +3,12 @@
 	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
 	<persistence-unit name="products-unit" transaction-type="RESOURCE_LOCAL">
-		<class>it.uniroma3.db.products.Product</class>
+		<class>it.uniroma3.db.model.Address</class>
+		<class>it.uniroma3.db.model.Product</class>
+		<class>it.uniroma3.db.model.Customer</class>
+		<class>it.uniroma3.db.model.OrderLine</class>
+		<class>it.uniroma3.db.model.Order</class>
+		<class>it.uniroma3.db.model.Provider</class>
 		<properties>
 			<property name="openjpa.ConnectionDriverName" value="org.postgresql.Driver" />
 			<property name="openjpa.ConnectionUserName" value="postgres" />
